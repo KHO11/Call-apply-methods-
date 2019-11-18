@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        var person = {
+            Introduction: function() {
+                return "Hello I am " + this.firstName + " " + this.lastName;
+            }
+        }
+        var man1 = {
+            firstName:"Jason",
+            lastName: "Lee"
+        }
+
+        var man2 = {
+            firstName:"Ethan",
+            lastName: "Francis"
+        }
+
+        var x = person.Introduction.call(man1); 
+        console.log(x);
+
+        var y = person.Introduction.apply(man2);
+        console.log(y);
+    </script>
+</body>
+</html>
